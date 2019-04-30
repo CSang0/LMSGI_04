@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<aiml version="1.0">
+
+<!-- Free software (c)2008 Square Bear. -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+<!-- Complies with AIML 1.0.1 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation. -->
+<!-- currency.aiml by Square Bear -->
+<!-- http://www.square-bear.co.uk -->
+<!-- Currencies of the World. -->
+
+<category> 
+	  <pattern>Hola</pattern>
+	    <template>Hola, bienvenid@, ¿en que te puedo ayudar?, prueba escribiendo "ayuda"</template>
+</category>
+
+
+<category> 
+	  <pattern>KnockKnock</pattern>
+	    <template>Hola, bienvenid@ a diversion con banderas, prueba escribiendo "ayuda" para comenzar <image>https://i.ibb.co/mvcJGKy/Screen-Shot-2016-07-28-at-17-03-41.png</image>
+ </template>
+</category>
+	
+<category>
+    <pattern>Ayuda</pattern>
+    <template>
+        Puedes pedir infromacion sobre los paises de la UE: <ol>
+       <li> La bandera de un pais (Escribe CUAL ES LA BANDERA DE **PAIS**)</li>
+       <li> Informacion sobre la bandera (Escribe INFORMACION SOBRE LA BANDERA DE **PAIS**) </li>
+       <li> Moneda del pais (Escribe CUAL ES LA MONEDA DE **PAIS**)</li>
+       <li> Mapa del pais (Escribe MAPA DE **PAIS**)</li></ol>
+    </template>
+</category>
+
+### Pais INFO
+
+<category><pattern>CUAL ES LA BANDERA DE *</pattern><template><srai>Cual es la bandera de <star/></srai></template></category>
+<category><pattern>QUE BANDERA TIENE *</pattern><template><srai>Cual es la bandera de <star/></srai></template></category>
+<category><pattern>QUE BANDERA USA *</pattern><template><srai>Cual es la bandera de <star/></srai></template></category>
+<category><pattern>QUE BANDERA PERTENECE A *</pattern><template><srai>Cual es la bandera de <star/></srai></template></category>
+<category><pattern>QUE BANDERA ES LA DE *</pattern><template><srai>Cual es la bandera de <star/></srai></template></category>
+<category><pattern>CUAL ES LA BANDERA DE *</pattern><template>Nunca he oido hablar de ese pais "<star/>", puede que no pertenezca a la UE. Intentalo de nuevo</template></category>
+
+<category>
+    <pattern>CUAL ES LA BANDERA DE España </pattern>
+    <template>
+    <think><set name="pais">españa</set></think>
+    <card>
+        <title>Aquí tienes la bandera de España.</title>
+            <image>http://flags.fmcdn.net/data/flags/w580/es.png</image>
+    </card>
+    Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+    </template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Alemania </pattern>
+    <template>
+        <think><set name="pais">alemania</set></think>
+    <card>
+            <title>Aquí tienes la bandera de Alemania</title>
+            <image>http://flags.fmcdn.net/data/flags/w580/de.png</image>
+    </card>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+    </template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Austria </pattern>
+    <template>
+        <card>
+            <title>Aquí tienes la bandera de Austria</title>
+            <image>http://flags.fmcdn.net/data/flags/w580/at.png</image>
+    </card>
+    <think><set name="pais">austria</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+    </template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Belgica </pattern>
+    <template>
+    <card>
+        <title>Aquí tienes la bandera de Bélgica</title>
+        <image>http://flags.fmcdn.net/data/flags/w580/be.png</image>
+    </card>
+    <think><set name="pais">belgica</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+    </template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Bulgaria </pattern>
+    <template>
+    <card>
+        <title>Aquí tienes la bandera de Bulgaria</title>
+        <image>http://flags.fmcdn.net/data/flags/w580/bg.png</image>
+    </card>
+    <think><set name="pais">bulgaria</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE republica checa </pattern>
+    <template>
+    <card>
+        <title>Aquí tienes la bandera de republica checa</title>
+        <image>http://flags.fmcdn.net/data/flags/w580/cz.png</image>
+    </card>
+    <think><set name="pais">republica checa</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Chipre </pattern>
+    <template>
+    <card>
+        <title>Aquí tienes la bandera de Chipre</title>
+        <image>http://flags.fmcdn.net/data/flags/w580/cy.png</image>
+    </card>
+    <think><set name="pais">chipre</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Dinamarca </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Dinamarca</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/dk.png</image>
+        </card>
+    <think><set name="pais">dinamarca</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Eslovaquia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Eslovaquia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/sk.png</image>
+        </card>
+    <think><set name="pais">eslovaquia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Eslovenia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Eslovenia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/si.png</image>
+        </card>
+    <think><set name="pais">eslovenia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Estonia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Estonia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/ee.png</image>
+        </card>
+    <think><set name="pais">estonia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Finlandia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Finlandia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/fi.png</image>
+        </card>
+    <think><set name="pais">finlandia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Francia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Francia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/fr.png</image>
+        </card>
+    <think><set name="pais">francia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Grecia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Grecia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/gr.png</image>
+        </card>
+    <think><set name="pais">grecia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Hungria </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Hungria</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/hu.png</image>
+        </card>
+    <think><set name="pais">hungria</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Irlanda </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Irlanda</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/ie.png</image>
+        </card>
+    <think><set name="pais">irlanda</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE 	Italia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Italia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/it.png</image>
+        </card>
+    <think><set name="pais">italia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Letonia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Letonia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/lv.png</image>
+        </card>
+    <think><set name="pais">letonia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Lituania </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Lituania</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/lt.png</image>
+        </card>
+    <think><set name="pais">lituania</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Luxemburgo </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Luxemburgo</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/lu.png</image>
+        </card>
+    <think><set name="pais">luxemburgo</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE 	Malta </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de	Malta</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/mt.png</image>
+        </card>
+    <think><set name="pais">malta</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category>
+<category>
+    <pattern>CUAL ES LA BANDERA DE Polonia </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de	Polonia</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/pl.png</image>
+        </card>
+    <think><set name="pais">polonia</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Portugal </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Portugal</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/pt.png</image>
+        </card>
+    <think><set name="pais">portugal</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Rumania </pattern>
+    <template>
+    <card>
+    <title>Aquí tienes la bandera de Rumania</title>
+    <image>http://flags.fmcdn.net/data/flags/w580/ro.png</image>
+        </card>
+    <think><set name="pais">rumania</set></think>
+        Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+</template>
+</category> 
+<category>
+    <pattern>CUAL ES LA BANDERA DE Suecia </pattern>
+    <template>
+        <card>
+            <title>Aquí tienes la bandera de Suecia</title>
+            <image>http://flags.fmcdn.net/data/flags/w580/se.png</image>
+        </card>
+        <think><set name="pais">suecia</set></think>
+            Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> 
+    </template>
+</category> 
+
+
+### Banderas INFO
+
+<category>
+    <pattern>INFORMACION SOBRE LA BANDERA DE *</pattern>
+    <template>
+        <think><set name="pais"><star/></set></think>
+        Aquí tienes información sobre la bandera de <formal> <star/></formal>.
+        <button>
+            <text>Pulsa aquí</text>
+            <url>http://www.banderas-mundo.es/<star/></url>
+        </button>
+    </template>
+</category> 
+
+
+### Pais Mapa
+<category>
+    <pattern>MAPA DE *</pattern>
+    <template>
+            <think><set name="pais"><star/></set></think>
+            Aquí esta el mapa de <formal> <star/></formal>.
+        <button>
+            <text>Pulsa aquí</text>
+            <url>https://www.google.com/maps/place/<star/></url>
+        </button>
+    </template>
+</category>
+
+
+### Pais Moneda
+
+<category><pattern>CUAL ES LA MONEDA DE *</pattern><template><srai>Cual es la moneda de<star/></srai></template></category>
+
+<category><pattern>CUAL ES LA MONEDA DE *</pattern><template>Nunca he oido hablar de ese pais "<star/>", puede que no pertenezca a la UE. Intentalo de nuevo</template></category>
+
+
+<category><pattern>CUAL ES LA MONEDA DE AUSTRIA</pattern><template><think><set name="pais">austria</set></think>Euro (Austrian Schilling was formerly in use). Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE BELGICA</pattern><template><think><set name="pais">belgica</set></think>Euro (Belgian Franc was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE BULGARIA</pattern><template><think><set name="pais">bulgaria</set></think>Lev.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE CROACIA</pattern><template><think><set name="pais">croacia</set></think>Kuna and Croatian Dinar.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE CHIPRE</pattern><template><think><set name="pais">chipre</set></think>Cypriot Pound.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE REPUBLICA CHECA</pattern><template><think><set name="pais">republica checa</set></think>Czech Koruna.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE DINAMARCA</pattern><template><think><set name="pais">dinamarca</set></think>Danish Krone.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE FINLANDIA</pattern><template><think><set name="pais">finlandia</set></think>Euro (Finnish Markka was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE FRANCIA</pattern><template><think><set name="pais">francia</set></think>Euro (French Franc was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE ALEMANIA</pattern><template><think><set name="pais">alemania</set></think>Euro (Deutsche Mark was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE GRECIA</pattern><template><think><set name="pais">grecia</set></think>Euro (Greek Drachma was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE HUNGRIA</pattern><template><think><set name="pais">hungria</set></think>Forint.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE IRLANDA</pattern><template><think><set name="pais">irlanda</set></think>Euro (Irish Pound was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE ITALIA</pattern><template><think><set name="pais">italia</set></think>Euro (Italian Lira was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE LETONIA</pattern><template><think><set name="pais">letonia</set></think>Lats.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE LITUANIA</pattern><template><think><set name="pais">lituania</set></think>Litas.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE LUXEMBURGO</pattern><template><think><set name="pais">luxemburgo</set></think>Euro (Luxembourg Franc was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category> 
+<category><pattern>CUAL ES LA MONEDA DE MALTA</pattern><template><think><set name="pais">malta</set></think>Maltese Lira (Maltese Pound formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE PAISES BAJOS </pattern><template><think><set name="pais">paises bajos</set></think>Euro (Dutch Guilder was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE POLONIA </pattern><template><think><set name="pais">polonia</set></think>New Zloty (replacement for Zloty).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE PORTUGAL</pattern><template><think><set name="pais">portugal</set></think>Euro (Potuguese Escudo was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE RUMANIA</pattern><template><think><set name="pais">rumania</set></think>Romanian Leu.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE ESLOVAQUIA</pattern><template><think><set name="pais">eslovaquia</set></think>Slovak Koruna.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE ESLOVENIA</pattern><template><think><set name="pais">eslovenia</set></think>Tolar.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE ESPAÑA</pattern><template><think><set name="pais">españa</set></think>Euro (Spanish Peseta was formerly in use).Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+<category><pattern>CUAL ES LA MONEDA DE SUECIA</pattern><template><think><set name="pais">suecia</set></think>Swedish Krona.Para mas información acerca de esta bandera o pais escribe: <ul>
+       <li>Info</li>
+       <li>Mapa</li>
+       <li>Moneda</li></ul> </template></category>  
+
+
+<category>
+    <pattern>Moneda</pattern>
+    <template>
+        <condition name="pais">
+            <li value="*"><srai> cual es la moneda de <get name="pais"/></srai></li>
+        </condition>
+    </template>
+</category>
+<category>
+    <pattern>Mapa</pattern>
+    <template>
+        <condition name="pais">
+            <li value="*"><srai> mapa de <get name="pais"/></srai></li>
+        </condition>
+    </template>
+</category>
+<category>
+    <pattern>Info</pattern>
+    <template>
+        <condition name="pais">
+            <li value="*"><srai> INFORMACION SOBRE LA BANDERA DE <get name="pais"/></srai></li>
+        </condition>
+    </template>
+</category>
+</aiml>

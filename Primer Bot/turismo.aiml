@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>HABLAME SOBRE *</pattern>
+    <template>
+        <think><set name="eso"><star/></set></think>
+        Aquí tienes información sobre <formal> <star/></formal>.
+        <button>
+            <text>Pulsa aquí</text>
+            <url>https://es.wikipedia.org/wiki/<star/></url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>MUESTRAME EL MAPA DE *</pattern>
+    <template>
+        <think><set name="alli"><star/></set></think>
+        Aquí esta el mapa de <formal> <star/></formal>.
+        <button>
+            <text>Pulsa aquí</text>
+            <url>https://www.google.com/maps/place/<star/></url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>QUE TIEMPO HACE EN *</pattern>
+    <template>
+        <think><set name="alli"><star/></set></think>
+        Que pases un buen día en <formal> <star/></formal> aqui tienes la previsión.
+        <button>
+            <text>Pulsa aquí</text>
+            <url>https://es.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+        </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>HABLAME SOBRE ESO</pattern>
+    <template>
+        <condition name="eso">
+            <li value="*"><srai>Hablame sobre <get name="eso"/></srai></li>
+            <li> Sobre que quieres que te cuente?</li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>MUESTRAME EL MAPA DE ALLI</pattern>
+    <template>
+        <condition name="eso">
+            <li value="*"><srai>Muestrame el mapa de <get name="eso"/></srai></li>
+            <li> El mapa de donde?</li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>QUE TIEMPO HACE ALLI</pattern>
+    <template>
+        <condition name="eso">
+            <li value="*"><srai>Que tiempo hace en <get name="eso"/></srai></li>
+            <li> Donde?</li>
+        </condition>
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>*</pattern>
+    <that>SOBRE QUE QUIERES QUE TE CUENTE</that>
+    <template>
+        <srai>Hablame sobre <star/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>EL MAPA DE DONDE</that>
+    <template>
+        <srai>Muestrame el mapa de <star/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <that>DONDE</that>
+    <template>
+        <srai>Que tiempo hace en <star/></srai>
+    </template>
+</category>
+
+</aiml>
